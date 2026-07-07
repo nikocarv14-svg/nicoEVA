@@ -1,0 +1,144 @@
+:root {
+    --primary: #2a5a5b;
+    --secondary: #e0f2f1;
+    --accent: #d32f2f;
+    --text: #333;
+    --bg: #f7f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+.btn-filtro {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.btn-filtro.activo, .btn-filtro:hover {
+    background-color: white;
+    color: var(--primary);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-experiencias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--primary);
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+}
+
+.descripcion-extra {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Formulario */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.grupo-control {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.error-mensaje {
+    color: var(--accent);
+    font-size: 0.85rem;
+    display: block;
+    margin-top: 0.25rem;
+    height: 18px;
+}
+
+#btn-enviar {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#btn-enviar:hover {
+    opacity: 0.9;
+}
+
+#mensaje-exito {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
